@@ -6,8 +6,9 @@ namespace backend.Model
     {
         public TaskDBContext(DbContextOptions<TaskDBContext> options) : base (options) { }
 
-        public DbSet<Usuario> Usuarios { get; set;}
-        public DbSet<Task> Tasks { get; set;}
-        public DbSet<Grupo> Grupos { get; set;}
+        public DbSet<Usuario> Usuario { get; set;}
+        public DbSet<Tarea> Tarea { get; set;}
+        public DbSet<Grupo> Grupo { get; set;}
+        public DbSet<UsuarioDeGrupo> UsuarioDeGrupo { get; set;}
     }
 }

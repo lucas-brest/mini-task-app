@@ -6,8 +6,7 @@ namespace backend.Model
     {
         [Key]
         public int Id { get; set; }
-        
-        public int UsuarioId { get; set; }
+        public string UsuarioUsername { get; set; }
         public int GrupoId { get; set; }
 
         public Usuario? Usuario { get; set; }
