@@ -1,7 +1,8 @@
 # MiniTaskApp
 
 - Usuario
-Id int
+Username string key
+Password string
 Nombre string
 
 - Tarea
