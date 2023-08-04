@@ -6,7 +6,8 @@ namespace backend.Model
     {
         [Key]
         public int Id { get; set; }
-        public List<Usuario> Miembros { get; set; }
+        [Required]
+        public string Nombre { get; set; }
         public List<Tarea> Tareas { get; set; }
     }
 }
