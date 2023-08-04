@@ -11,6 +11,72 @@ namespace backend.Services
             _context = context;
         }
 
+        public bool AddUpdateGrupo(Grupo grupo)
+        {
+            try
+            {
+                if (_context.Grupo.ToList().IndexOf(grupo) == -1)
+                {
+                    _context.Grupo.Add(grupo);
+                }
+                else
+                {
+                    _context.Grupo.Update(grupo);
+                }
+                _context.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString);
+                return false;
+            }
+        }
+
+        public bool AddUpdateUsuario(Usuario usuario)
+        {
+            try
+            {
+                if (_context.Usuario.ToList().IndexOf(usuario) == -1)
+                {
+                    _context.Usuario.Add(usuario);
+                }
+                else
+                {
+                    _context.Usuario.Update(usuario);
+                }
+                _context.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString);
+                return false;
+            }
+        }
+
+        public bool AddUpdateTarea(Tarea tarea)
+        {
+            try
+            {
+                if(_context.Tarea.ToList().IndexOf(tarea) == -1)
+                {
+                    _context.Tarea.Add(tarea);
+                } 
+                else
+                {
+                    _context.Tarea.Update(tarea);
+                }
+                _context.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString);
+                return false;
+            }
+        }
+
         public List<Tarea> GetTareasByGrupoId(int grupoId)
         {
             try
